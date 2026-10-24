@@ -1,8 +1,7 @@
 // Explorer marks: files of this workspace that agents read again and again.
 import * as vscode from 'vscode';
-import { t } from './format';
-import type { Lang } from './format';
-import type { RpcClient } from './rpc';
+import type { Lang, RpcClient } from '@bumeter/vscode-kit';
+import { t } from './strings';
 
 export interface FileReads { path: string; reads: number; edits: number; last_ts: string }
 export interface Mark { badge: string; tooltip: string; color: 'error' | 'warning' }
