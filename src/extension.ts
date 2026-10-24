@@ -1,22 +1,18 @@
 // Bumeter for VS Code: quota and context in the status bar, files agents keep reading in the Explorer,
 // and the app's Overview in a panel. Everything comes from `bum rpc` on this machine (the remote one
 // when the window is remote: the extension runs where the logs are).
-import * as path from 'node:path';
 import * as vscode from 'vscode';
 import { ensureExecutable, findBum } from './binary';
 import { FileMarks } from './decorations';
 import { langOf, t } from './format';
 import { OverviewPanel } from './panel';
+import { projectOf } from './project';
 import { RpcClient } from './rpc';
 import { StatusBar } from './status';
 
 let rpc: RpcClient | undefined;
 
-/** A workspace is a project the way Bumeter names them: the folder's own name (the last part of the session's cwd). */
-export function projectOf(folders: readonly { uri: { fsPath: string } }[] | undefined): string | null {
-  const first = folders?.[0];
-  return first ? path.basename(first.uri.fsPath) || null : null;
-}
+export { projectOf };
 
 export function activate(ctx: vscode.ExtensionContext): void {
   const lang = langOf(vscode.env.language);

@@ -35,4 +35,13 @@ npx vsce package --no-dependencies --target linux-x64
 
 The UI comes from [`@bumeter/ui`](https://github.com/bumeter/ui) and `bum` from [bumeter/statusline](https://github.com/bumeter/statusline) releases (`BUM_VERSION`). Tagging `vX.Y.Z` builds one `.vsix` per platform and attaches them to a GitHub Release.
 
+## Products in this repository
+
+| Product | Folder | Release tag |
+|---|---|---|
+| Bumeter (this extension) | repository root | `vX.Y.Z` |
+| [Claude Code Usage](products/usage/README.md): only the status bar | `products/usage`, entry `src/usage/extension.ts` | `usage-vX.Y.Z` |
+
+Both share the code in `src/` and one test suite; `npm run build` builds both. To package Claude Code Usage: `PRODUCT=usage BUM_BINARY=.bum/bum BUM_PLATFORM=linux-x64 node scripts/media.mjs`, then `cd products/usage && npx vsce package --no-dependencies --target linux-x64`.
+
 Part of Bumeter: [Statusline](https://github.com/bumeter/statusline) · [Desktop](https://github.com/bumeter/bumeter) · [bumeter.cc](https://bumeter.cc).

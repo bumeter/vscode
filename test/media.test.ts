@@ -26,4 +26,19 @@ describe('scripts/media.mjs', () => {
   it('fails when BUM_BINARY does not exist', () => {
     expect(() => run({ BUM_BINARY: '/nope/bum', BUM_PLATFORM: 'linux-x64' })).toThrow();
   });
+
+  it('PRODUCT=usage bundles bum into products/usage/ and no UI', () => {
+    const dir = mkdtempSync(join(tmpdir(), 'bum-'));
+    const bum = join(dir, 'bum');
+    writeFileSync(bum, 'x');
+    rmSync(join(ext, 'products', 'usage', 'media', 'ui'), { recursive: true, force: true });
+    run({ PRODUCT: 'usage', BUM_BINARY: bum, BUM_PLATFORM: 'darwin-arm64' });
+    expect(existsSync(join(ext, 'products', 'usage', 'bin', 'darwin-arm64', 'bum'))).toBe(true);
+    expect(existsSync(join(ext, 'products', 'usage', 'media', 'ui'))).toBe(false);
+    rmSync(dir, { recursive: true, force: true });
+  });
+
+  it('fails for a product that does not exist', () => {
+    expect(() => run({ PRODUCT: 'nope' })).toThrow();
+  });
 });
