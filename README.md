@@ -33,6 +33,6 @@ BUM_BINARY=.bum/bum BUM_PLATFORM=linux-x64 node scripts/media.mjs
 npx vsce package --no-dependencies --target linux-x64
 ```
 
-The UI comes from [`@bumeter/ui`](https://github.com/bumeter/ui) and `bum` from [bumeter/statusline](https://github.com/bumeter/statusline) releases (`BUM_VERSION`). Tagging `vX.Y.Z` builds one `.vsix` per platform and attaches them to a GitHub Release.
+Shared code (the `bum rpc` client, the status bar item) comes from [`@bumeter/vscode-kit`](https://github.com/bumeter/vscode-kit), the UI from [`@bumeter/ui`](https://github.com/bumeter/ui) and `bum` from [bumeter/statusline](https://github.com/bumeter/statusline) releases (`BUM_VERSION`). Tagging `vX.Y.Z` builds one `.vsix` per platform and attaches them to a GitHub Release.
 
-Part of Bumeter: [Statusline](https://github.com/bumeter/statusline) · [Desktop](https://github.com/bumeter/bumeter) · [bumeter.cc](https://bumeter.cc).
+Part of Bumeter: [Claude Code Usage](https://github.com/bumeter/vscode-claude-usage) (only the status bar) · [Statusline](https://github.com/bumeter/statusline) · [Desktop](https://github.com/bumeter/bumeter) · [bumeter.cc](https://bumeter.cc).

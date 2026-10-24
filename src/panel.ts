@@ -2,7 +2,7 @@
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';
-import type { RpcClient } from './rpc';
+import type { RpcClient } from '@bumeter/vscode-kit';
 
 /** Webview page: CSP, base URL for the bundled assets, and the start view as a query. Pure, for tests. */
 export function buildHtml(index: string, baseUri: string, cspSource: string, nonce: string, query: string): string {

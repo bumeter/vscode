@@ -1,5 +1,13 @@
 # Changelog
 
+## 0.2.1
+
+- Clearer name and description on the Marketplace. Nothing else changes.
+
+## 0.2.0
+
+- Built from its own repository (bumeter/vscode); the UI comes from `@bumeter/ui`, `bum` from bumeter/statusline releases. Nothing changes in use.
+
 ## 0.1.0
 
 First release.
