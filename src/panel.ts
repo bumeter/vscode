@@ -1,4 +1,4 @@
-// The Overview panel: the desktop app's own UI (app/ui) in a webview, talking to `bum rpc` through us.
+// The Overview panel: the desktop app's own UI (@bumkom/ui) in a webview, talking to `bum rpc` through us.
 import * as fs from 'node:fs';
 import * as path from 'node:path';
 import * as vscode from 'vscode';

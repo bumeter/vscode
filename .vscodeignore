@@ -6,3 +6,7 @@ esbuild.mjs
 vitest.config.mjs
 tsconfig.json
 **/*.map
+BUM_VERSION
+.bum/**
+.github/**
+out/**
