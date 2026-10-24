@@ -9,7 +9,7 @@ const run = (env: Record<string, string>) =>
   execFileSync('node', ['scripts/media.mjs'], { cwd: ext, env: { ...process.env, ...env }, encoding: 'utf8', stdio: 'pipe' });
 
 describe('scripts/media.mjs', () => {
-  it('copies @bumkom/ui from node_modules', () => {
+  it('copies @bumeter/ui from node_modules', () => {
     run({});
     expect(existsSync(join(ext, 'media', 'ui', 'index.html'))).toBe(true);
   });

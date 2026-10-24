@@ -1,4 +1,4 @@
-// Copies what the extension ships besides its own code: the Bumeter UI (@bumkom/ui's dist) and the
+// Copies what the extension ships besides its own code: the Bumeter UI (@bumeter/ui's dist) and the
 // `bum` binary given in BUM_BINARY into bin/<BUM_PLATFORM>/. The release workflow fetches one `bum`
 // per platform with scripts/fetch-bum.sh and runs this once for each.
 import { cpSync, existsSync, mkdirSync, rmSync } from 'node:fs';
@@ -8,9 +8,9 @@ import { fileURLToPath } from 'node:url';
 const here = dirname(fileURLToPath(import.meta.url));
 const ext = join(here, '..');
 
-const ui = join(ext, 'node_modules', '@bumkom', 'ui', 'dist');
+const ui = join(ext, 'node_modules', '@bumeter', 'ui', 'dist');
 if (!existsSync(join(ui, 'index.html'))) {
-  console.error('node_modules/@bumkom/ui/dist is missing: run `npm install` first');
+  console.error('node_modules/@bumeter/ui/dist is missing: run `npm install` first');
   process.exit(1);
 }
 rmSync(join(ext, 'media', 'ui'), { recursive: true, force: true });

@@ -72,7 +72,7 @@
     "package": "npm run build && npm run media && vsce package --no-dependencies"
   },
   "devDependencies": {
-    "@bumkom/ui": "file:../../../../../tmp/claude-1000/-home-chieund-project-bumeter-docs/58ce8f01-9853-4baf-8dae-3c3c87e2b986/scratchpad/bumkom-ui-1.2.0.tgz",
+    "@bumeter/ui": "^1.2.0",
     "@types/node": "^20.0.0",
     "@types/vscode": "1.85.0",
     "@vscode/vsce": "^3.0.0",
