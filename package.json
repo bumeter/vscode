@@ -1,8 +1,8 @@
 {
   "name": "bumeter",
   "displayName": "Bumeter — AI Coding Token Usage (Claude Code, Kiro, OpenCode)",
-  "description": "See where your Claude Code, Kiro and OpenCode tokens go: quota and context in the status bar, the costliest conversations and turns, a skill manager, and the files agents keep reading. Read from local logs; nothing leaves your machine.",
-  "version": "0.2.1",
+  "description": "See where your Claude Code, Kiro and OpenCode tokens go: 5-hour and weekly quota in the status bar, the costliest conversations and turns, why the quota ran out, a skill manager, and the files agents keep reading. Local only. By Bumeter (unofficial, not made by Anthropic).",
+  "version": "0.2.2",
   "publisher": "bumkom",
   "license": "GPL-3.0-or-later",
   "repository": {
@@ -11,22 +11,28 @@
   },
   "homepage": "https://bumeter.cc",
   "categories": [
-    "Other",
-    "Visualization"
+    "AI",
+    "Visualization",
+    "Other"
   ],
   "keywords": [
     "claude code",
+    "claude code usage",
+    "token usage",
+    "ai token usage",
     "claude",
     "kiro",
     "opencode",
-    "token usage",
     "usage",
     "quota",
     "rate limit",
+    "usage limit",
     "context",
+    "context window",
     "tokens",
     "cost",
     "skills",
+    "claude code skills",
     "agent",
     "ai",
     "statusline",
@@ -96,5 +102,8 @@
   "icon": "media/icon.png",
   "engines": {
     "vscode": "^1.85.0"
+  },
+  "bugs": {
+    "url": "https://github.com/bumeter/vscode/issues"
   }
 }

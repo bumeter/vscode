@@ -1,5 +1,9 @@
 # Changelog
 
+## 0.2.2
+
+- Marketplace page: screenshots of the Overview, Conversations, Skills, the status bar and Explorer marks; an FAQ; a clearer description.
+
 ## 0.2.1
 
 - Clearer name and description on the Marketplace. Nothing else changes.

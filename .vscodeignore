@@ -10,3 +10,5 @@ BUM_VERSION
 .bum/**
 .github/**
 out/**
+media/screenshots/**
+media/social-preview.png
